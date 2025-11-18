@@ -1,118 +1,73 @@
-# ✋ BeAbled – Where Hands Speak Louder
+# BeAbled – Where Hands Speak Louder
 
-### 🎉 **Winner of the Google Developer Student Clubs (GDSC) SFU Hackathon** 🎉
-BeAbled is an accessibility-focused video communication web app designed to **bridge communication gaps** for the Deaf and Hard of Hearing community. It integrates real-time **ASL gesture detection** with **speech synthesis**, video calling, and room-based interaction — all wrapped in a sleek, modern UI.
+### 🎉 **Winner of the Google Developer Student Clubs (GDSC) SFU Hackathon 2025** 🎉
+BeAbled is an accessibility-focused web application designed to support communication for the Deaf and Hard of Hearing community. The platform uses a custom-built ASL gesture recognition model and converts recognized gestures into synthesized speech in real time.
 
-## 🤖 Custom AI Model Architecture
-- **Model**: `gesture_mobilenet_advanced2.h5` (**Trained by our team from scratch**)
-- **Labels**: `class_indices.json`  
-- **Foundation**: MobileNet backbone with **self-collected ASL dataset**
-- **Training Process**: Custom CNN model development using our own data collection
-- **Dataset**: Proprietary ASL gesture dataset collected and annotated by our team
-- **Performance**: Real-time inference with high accuracy optimized for our specific use case
+---
 
+## 🌟 Key Features
 
+- **Real-time ASL Gesture Recognition** powered by a custom MobileNet-based CNN  
+- **Speech Generation** using the Web Speech API  
+- **Custom-trained model and handcrafted dataset** collected and annotated by our team  
+- **Lightweight Flask backend** for fast inference  
+- **Clean, intuitive UI** with live prediction overlays  
+- **Optional room-based interaction** using Socket.IO (minimal focus)
+
+---
 https://github.com/user-attachments/assets/0ef17abf-ba9f-471d-97f4-20a286a7e710
 
 
 
----
+## 🤖 Custom AI Model
 
-## 🌟 Features
+- **Model:** `gesture_mobilenet_advanced2.h5`  
+- **Labels:** `class_indices.json`  
+- **Architecture:** MobileNet backbone with custom classification layers  
+- **Dataset:** Fully self-collected ASL gesture dataset  
+- **Training:** Designed, trained, and optimized entirely by our team  
+- **Performance:** Real-time inference suitable for live webcam input
 
-- 🎥 **Video Calling** with remote and local stream views  
-- ✋ **ASL Gesture Detection** using TensorFlow + MediaPipe  
-- 🔊 **Caption-to-Voice** with built-in text-to-speech  
-- 🧠 **Real-time prediction** with confidence overlay  
-- 🏠 **Custom Room System** for private communication  
-- 🎨 **Modern, Animated UI** built with Bootstrap & CSS3  
-- 🌐 **Socket.IO powered** for real-time sync
+This project uses no external ASL datasets. Everything was built from scratch for this application.
 
----
 
 ## 🧠 Tech Stack
 
-- **Frontend**: HTML5, CSS3, Bootstrap 5, JavaScript  
-- **Backend**: Python, Flask, Flask-SocketIO  
-- **AI/ML**: TensorFlow, MediaPipe, MobileNetV2  
-- **TTS**: Web Speech API (Client-side)  
-- **Live Video**: WebRTC via `getUserMedia()`  
-- **Deployment**: Localhost or cloud-ready
+**Frontend:** HTML, CSS, Bootstrap, JavaScript  
+**Backend:** Python (Flask, Flask-SocketIO)  
+**AI/ML:** TensorFlow, MediaPipe, MobileNet  
+**Speech:** Web Speech API  
+**Camera Input:** WebRTC `getUserMedia()`
 
 ---
 
-## 🖼️ UI Preview
 
-![BeAbled Preview](docs/ui-preview.png)
 
----
 
 ## ⚙️ Getting Started
 
-### 1. Clone the repo
+### 1. Clone the repository
 ```bash
 git clone https://github.com/your-username/beabled.git
 cd beabled
 ```
 
-### 2. Set up the virtual environment
-- Install Requirements
+### 2. Install dependencies
+```bash
+pip install -r requirements.txt
+```
 
-### 3. Run the Flask server
+### 3. Run the backend
 ```bash
 python app.py
 ```
 
-### 4. Open your browser
+### 4. Open the UI
 ```
 http://localhost:5500
 ```
 
 ---
+## 💜 Purpose
 
-## 🤖 Model & Data
-
-- **Model**: `gesture_mobilenet_advanced2.h5`  
-- **Labels**: `class_indices.json`  
-- Based on custom ASL training dataset (MobileNet backbone)
-
----
-
-## 📁 Project Structure
-
-```
-├── app.py
-├── static/
-│   └── app.js
-├── templates/
-│   └── index.html
-├── gesture_mobilenet_advanced2.h5
-├── class_indices.json
-
-```
-
----
-
-## 📢 Voice Integration
-
-Uses the browser's **Web Speech API** to speak out ASL predictions as they are detected. Requires mic & speaker access.
-
----
-
-## 💜 UI Themes
-
-- Dark purple navbar with animated gradient logo
-- Soft lavender body background
-- Live caption display with subtle animations
-
----
-
-## 📌 TODO / Future Work
-
-- Add **multilingual TTS** support  
-- Enable **voice-to-ASL recognition**  
-- Implement **user auth** and persistent rooms  
-- Extend gesture set (fingerspelling A–Z, more words)
-
----
-
+BeAbled was built to help make communication more accessible for the Deaf and Hard of Hearing community using real-time AI. Our goal is to expand it into a more complete assistive communication tool.
