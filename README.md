@@ -5,6 +5,14 @@ BeAbled is an accessibility-focused web application designed to support communic
 
 ---
 
+
+
+
+
+
+<img width="2130" height="1767" alt="image" src="https://github.com/user-attachments/assets/101cfb91-8f69-44b2-ba5a-722810e5da2b" />
+
+
 ## 🌟 Key Features
 
 - **Real-time ASL Gesture Recognition** powered by a custom MobileNet-based CNN  
